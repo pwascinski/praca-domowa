@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int main() {
+	printf("zad 1\n");
+
+	int numerAlbumu = 123008;
+	printf("Numer albumu: %d\n", numerAlbumu);
+
+	printf("zad 2\n");
+
+	int Liczba;
+	printf("Podaj liczbe calkowita: ");
+	scanf_s("%d", &Liczba);
+	int mod = Liczba % 2;
+
+	if (mod == 0) {
+		printf("Liczba: %d jest parzysta\n", Liczba);
+	}
+	else {
+		printf("Liczba: %d nie jest parzysta\n", Liczba);
+	}
+
+	printf("zad 3\n");
+	float a, b;
+	printf("Podaj dwie liczby zmiennoprzecinkowe: ");
+	scanf_s("%f %f", &a, &b);
+
+	if (a > b) {
+		printf("%f jest wieksza od %f\n", a, b);
+	}
+	else if (a == b) {
+		printf("%f rowna sie %f\n", a, b);
+	}
+	else {
+		printf("%f jest mniejsza od %f\n", a, b);
+	}
+
+	printf("zad 4 \n");
+	float c, d, e, f, srednia;
+	printf("Wprowadz 4 liczby zmiennoprzecinkowe: ");
+	scanf_s("%f %f %f %f", &c, &d, &e, &f);
+	srednia = (c + d + e + f) / 4;
+	printf("Srednia arytmetyczna liczb %f %f %f %f to %f\n", c, d, e, f, srednia);
+
+	printf("zad 5\n");
+	int a1, a2;
+	char kalkulator;
+	printf("Wprowadz dwie liczby oraz znak (+,-,*,/)\n");
+	scanf_s("%d %d %c", &a1, &a2, &kalkulator);
+
+	switch (kalkulator) {
+	case '+':
+		printf("%d\n", a1 + a2);
+		break;
+	case '-':
+		printf("%d\n", a1 - a2);
+		break;
+	case '*':
+		printf("%d\n", a1 * a2);
+		break;
+	case '/':
+		printf("%d\n", a1 / a2);
+		break;
+	default:
+		printf("Brak rozwiazania");
+		break;
+	}
+	return 0;
